@@ -1,0 +1,7 @@
+FROM ubuntu:jammy
+
+RUN adduser --disabled-password --no-create-home blahfoo
+RUN apt-get update && apt-get install -y git
+USER blahfoo
+
+ENTRYPOINT ["sh"]
